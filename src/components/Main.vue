@@ -1,6 +1,6 @@
 <template>
-  <div class="py-12 px-6  bg-gray rounded-2xl flex flex-col  ">
-    <h1 class="mb-6 text-2xl font-medium text-center">Выберите рассылки, которые подходят именно вам</h1>
+  <div class="sm:py-12 sm:px-6 py-8 px-4 bg-gray rounded-2xl flex flex-col  ">
+    <h1 class="sm:mb-6 mb-4 text-2xl font-medium sm:text-center">Выберите рассылки, которые подходят именно вам</h1>
     <Input />
     <news-list />
   </div>

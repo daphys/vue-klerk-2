@@ -1,10 +1,15 @@
 <template>
-    <div class="gap-6 sm:grid sm:grid-rows-2 sm:grid-flow-col flex flex-col">
+    <div class="gap-6 sm:grid sm:grid-rows-2 sm:grid-flow-col flex flex-col items-center">
         
-  <div v-for="(news, id) in newsSet" :key="id" class="p-6 bg-white rounded-2xl shadow-main flex gap-6 items-start">
+  <div v-for="(news, id) in newsSet" :key="id" class="sm:p-6 py-6 px-4 justify-between bg-white rounded-2xl shadow-main flex gap-6 items-start ">
     <div>
-        <p style="font-size : 13px" class="text-grayText">{{ news.short }}</p>
-        <p class=" text-xl mb-2">{{ news.title }}</p>
+        <div class="flex sm:mb-0 mb-[12px] align-center justify-between">
+            <div>
+                <p style="font-size : 13px" class="text-grayText">{{ news.short }}</p>
+                <p class=" text-xl sm:mb-2">{{ news.title }}</p>
+            </div>
+            <img class="sm:hidden block" width="40" height="40" :src="`src/assets/pics/${news.img}.svg`" alt="">
+        </div>
         <p class="mb-4 text-grayText text-sm" v-html="news.desc" />
         <div class="mb-4 flex flex-col gap-2">
             <div class="flex gap-2" v-for="(plus,id) in news.plusSet" :key="id">
@@ -14,15 +19,15 @@
                 </div>
         </div>
     </div>
-        <div class="flex gap-2 items-center">
+        <div class="flex gap-2 items-end">
             <label class="relative inline-flex items-center  cursor-pointer">
                 <input type="checkbox" value="" class="sr-only peer">
-                <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                <div class="w-11 h-6 bg-[#EEEEEE] rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full  after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white   after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
             </label>
             <p class="text-sm">Уже получает {{news.peopleCount}} человек</p>
         </div>
     </div>
-    <img :src="`src/assets/pics/${news.img}.svg`" alt="">
+    <img class="sm:block hidden" :src="`src/assets/pics/${news.img}.svg`" alt="">
   </div>
     </div>
 </template>

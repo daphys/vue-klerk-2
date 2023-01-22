@@ -16,7 +16,9 @@ module.exports = {
       colors: {
         'gray': '#F5F5F8',
         'grayText' : '#999999',
-        'sky' : '#E6EDFF'
+        'sky' : '#E6EDFF',
+        'grayText2' : '#666666',
+        'blueText' : '#5A8CF1',
       },
       boxShadow: {
         'main': '0px 8px 16px 0px #00000014',
